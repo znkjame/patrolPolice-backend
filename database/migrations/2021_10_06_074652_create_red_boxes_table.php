@@ -16,8 +16,8 @@ class CreateRedBoxesTable extends Migration
         Schema::create('red_boxes', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->float('latitude');
-            $table->float('longitude');
+            $table->double('latitude',12,8);
+            $table->double('longitude',12,8);
             $table->timestamps();
             $table->softDeletes();
         });

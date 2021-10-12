@@ -14,6 +14,11 @@ class RedBoxResource extends JsonResource
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+        return array_merge(parent::toArray($request),
+            ['position' => [
+                'lat' => $this->latitude,
+                'lng' => $this->longitude
+            ]
+            ]);
     }
 }

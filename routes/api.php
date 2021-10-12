@@ -17,5 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::resource('redboxes',\App\Http\Controllers\Api\RedBoxController::class);
-Route::resource('polices',\App\Http\Controllers\Api\PoliceController::class);
+Route::apiResource('redboxes',\App\Http\Controllers\Api\RedBoxController::class);
+Route::apiResource('polices',\App\Http\Controllers\Api\PoliceController::class);
+Route::apiResource('assignments',\App\Http\Controllers\Api\AssignmentController::class);
+Route::apiResource('reports',\App\Http\Controllers\Api\ReportController::class);

@@ -2,10 +2,10 @@
 
 namespace Database\Seeders;
 
-use App\Models\Police;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
-class PoliceSeeder extends Seeder
+class UserSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,6 +14,6 @@ class PoliceSeeder extends Seeder
      */
     public function run()
     {
-        Police::factory(10)->hasUser(1)->create();
+//        User::factory(5)->create();
     }
 }

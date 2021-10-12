@@ -3,6 +3,9 @@
 namespace Database\Factories;
 
 use App\Models\Assignment;
+use App\Models\Police;
+use App\Models\RedBox;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class AssignmentFactory extends Factory
@@ -22,7 +25,12 @@ class AssignmentFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'detail' => $this->faker->realText(30),
+            'time' => $this->faker->time(),
+            'status' => 'NEW',
+            'commander_id' => Police::factory(),
+            'patrol_id' => Police::factory(),
+            'red_box_id' => RedBox::factory()
         ];
     }
 }

@@ -18,7 +18,7 @@ class CreateAssignmentsTable extends Migration
             $table->string('detail');
             $table->time('time');
             $table->foreignId('commander_id');
-            $table->foreignId('patrol_id');-
+            $table->foreignId('patrol_id');
             $table->foreignIdFor(\App\Models\RedBox::class)->nullable();
             $table->string('status');
             $table->timestamps();

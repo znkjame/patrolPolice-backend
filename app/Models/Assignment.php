@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Assignment extends Model
 {
-    use HasFactory;
+    use HasFactory,SoftDeletes;
 
     public function commander(){
         return $this->belongsTo(Police::class,'commander_id');

@@ -22,7 +22,9 @@ class RedBoxFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => $this->faker->streetName(),
+            'latitude' => $this->faker->randomFloat(8,13.6,14.2),
+            'longitude' => $this->faker->randomFloat(8,100,101)
         ];
     }
 }

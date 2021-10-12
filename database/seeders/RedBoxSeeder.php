@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\RedBox;
+use Database\Factories\RedBoxFactory;
 use Illuminate\Database\Seeder;
 
 class RedBoxSeeder extends Seeder
@@ -13,6 +15,6 @@ class RedBoxSeeder extends Seeder
      */
     public function run()
     {
-        //
+        RedBox::factory(10)->create();
     }
 }

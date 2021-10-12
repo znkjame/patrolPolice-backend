@@ -2,6 +2,8 @@
 
 namespace Database\Factories;
 
+use App\Models\Assignment;
+use App\Models\RedBox;
 use App\Models\Report;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -22,7 +24,9 @@ class ReportFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'note' => $this->faker->realText(30),
+            'assignment_id' => Assignment::factory(),
+            'red_box_id' => RedBox::factory()
         ];
     }
 }
