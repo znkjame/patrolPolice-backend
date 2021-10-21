@@ -11,7 +11,7 @@ class Police extends Model
     use HasFactory,SoftDeletes;
 
     public static $police_rank = ['General', 'Lieutenant General', 'Major General', 'Colonel','Lieutenant Colonel',
-                                    'Major', 'Captain','Lieutenat','Sub-Lieutenant','Senior Sergeant Major','Sergeant Major',
+                                    'Major', 'Captain','Lieutenant','Sub-Lieutenant','Senior Sergeant Major','Sergeant Major',
                                     'Sergeant','Corporal','Lance Corporal'];
 
     public function user(){
