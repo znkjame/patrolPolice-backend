@@ -89,4 +89,5 @@ class AssignmentController extends Controller
         $assignment->delete();
         return new AssignmentResource($assignment);
     }
+
 }
