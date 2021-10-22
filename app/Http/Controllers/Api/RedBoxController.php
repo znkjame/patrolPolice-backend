@@ -80,4 +80,8 @@ class RedBoxController extends Controller
         $redBox->delete();
         return new RedBoxResource($redBox);
     }
+
+    public function getRedBoxWithReportAfter(Request $request){
+
+    }
 }

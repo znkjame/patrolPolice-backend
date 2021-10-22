@@ -18,7 +18,11 @@ class Police extends Model
         return $this->belongsTo(User::class);
     }
 
-//    public function assignments(){
-//        return $this->hasMany(Assignment::class);
-//    }
+    public function assigned_assignments(){
+        return $this->hasMany(Assignment::class,'patrol_id');
+    }
+
+    public function assign_to_assignments(){
+        return $this->hasMany(Assignment::class,'commander_id');
+    }
 }

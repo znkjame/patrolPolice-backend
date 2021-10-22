@@ -10,6 +10,8 @@ class Assignment extends Model
 {
     use HasFactory,SoftDeletes;
 
+    protected $appends = ['commander_name', 'patrol_name', 'red_box_name'];
+
     public function commander(){
         return $this->belongsTo(Police::class,'commander_id');
     }
@@ -24,5 +26,17 @@ class Assignment extends Model
 
     public function reports(){
         return $this->hasMany(Report::class);
+    }
+
+    public function getCommanderNameAttribute(){
+        return  $this->commander->rank . " " . $this->commander->firstname . " ". $this->commander->lastname ;
+    }
+
+    public function getPatrolNameAttribute(){
+        return $this->patrol->rank . " " . $this->patrol->firstname . " ". $this->patrol->lastname ;
+    }
+
+    public function getRedBoxNameAttribute(){
+        return $this->redBox->name ;
     }
 }
