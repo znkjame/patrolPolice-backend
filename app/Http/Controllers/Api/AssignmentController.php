@@ -90,4 +90,10 @@ class AssignmentController extends Controller
         return new AssignmentResource($assignment);
     }
 
+    public function findByCommenderid($id)
+    {
+        $assignment = Assignment::where('commander_id' , $id)->with('commander')->get();
+        return $assignment ;
+    }
+
 }

@@ -21,6 +21,7 @@ Route::apiResource('redboxes',\App\Http\Controllers\Api\RedBoxController::class)
 Route::apiResource('polices',\App\Http\Controllers\Api\PoliceController::class);
 Route::apiResource('assignments',\App\Http\Controllers\Api\AssignmentController::class);
 Route::apiResource('reports',\App\Http\Controllers\Api\ReportController::class);
+Route::get('assignments/admin/{id}',[\App\Http\Controllers\Api\AssignmentController::class , 'findByCommenderid']);
 
 
 
