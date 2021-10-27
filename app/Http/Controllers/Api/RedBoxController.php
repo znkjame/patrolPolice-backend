@@ -16,7 +16,7 @@ class RedBoxController extends Controller
      */
     public function index()
     {
-        $redBoxs = RedBox::with('assignments')->get();
+        $redBoxs = RedBox::with('assignments','reports')->get();
         return RedBoxResource::collection($redBoxs);
     }
 
