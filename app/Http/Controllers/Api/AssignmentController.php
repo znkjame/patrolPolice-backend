@@ -96,4 +96,12 @@ class AssignmentController extends Controller
         return $assignment ;
     }
 
+    public function updateStatus(Request $request, $id)
+    {
+        $assignment = Assignment::findOrFail($id) ;
+        $assignment->status = $request->input('status');
+        $assignment->save();
+        return $assignment ;
+    }
+
 }

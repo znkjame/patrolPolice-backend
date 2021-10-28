@@ -22,7 +22,7 @@ Route::apiResource('polices',\App\Http\Controllers\Api\PoliceController::class);
 Route::apiResource('assignments',\App\Http\Controllers\Api\AssignmentController::class);
 Route::apiResource('reports',\App\Http\Controllers\Api\ReportController::class);
 Route::get('assignments/admin/{id}',[\App\Http\Controllers\Api\AssignmentController::class , 'findByCommenderid']);
-
+Route::put('assignments/update/{id}',[\App\Http\Controllers\Api\AssignmentController::class , 'updateStatus']);
 
 
 Route::group([
